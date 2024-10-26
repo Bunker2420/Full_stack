@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #FC466B;">
+    <form>
+    <div style="
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 500px;
+                width: 1270px;">
+        <div style="border-style: solid;
+                    height: 150px;
+                    width: 200px;
+                    border-color: white;
+                    background-color: ;
+                    box-shadow: 4px 4px whitesmoke;">
+        <div><input type="email" placeholder="enter the email" style="margin-bottom: 20px;
+                                                                      width: 170px;
+                                                                      margin-left: 7px;
+                                                                      margin-top: 10px;
+                                                                      padding-left: 10px;" id="email"></div>
+        <div><input type="password" style="margin-bottom: 20px;
+                                           width: 170px;
+                                           margin-left: 7px;
+                                           padding-left: 10px;" placeholder="enter password" id="password"></div>
+        <div><button style="margin-left: 48px;
+                            height: 30px;
+                            width: 100px;
+                            background-color: #4A00E0;
+                            border: 0px;
+                            outline: none;
+                            border-radius: 3.5%;
+                            cursor: pointer;" 
+                            onclick="xey(event)";
+                            onsubmit='event'">Login</button></div>
+        </div>
+        </form>
+    </div>
+    <script>
+        console.log('Hello world')
+        alert('hello')
+
+        let x;
+        x='10'
+        console.log(x+10);
+        x='hello'
+        console.log(x);
+        x=30
+        console.log(x);
+        let obj ={
+                   name : 'Hello',
+                   price : 100
+                  };
+        console.log(obj.name);
+        console.log(obj);
+        let arr = ['a',obj,'bafoon']
+        console.log(arr);
+        console.log(`this is very good ${x}`);
+        let arr2 = [1,2,3,4,5]
+        let arr3 = [arr,'hello',arr2]
+        console.log(arr3);
+        let arr4 = [...arr,'one',...arr2]
+        console.log(arr4);
+        function key()
+        {
+            console.log(arr4);
+            alert('fuck you')
+
+        }
+        key()
+        function xey(event)
+        {
+           event.preventDefault()
+           let email =  document.getElementById('email').value;
+           let password = document.getElementById('password').value;
+           console.log("Logined" + email +"AND"+password);
+           if(password.length < 5)
+           {
+              alert('password should contain more than 5 numbers or characters')
+           }
+           else
+           {
+              alert(`Login successfully user ${email}`)
+              api();
+           }
+        }
+        function api()
+        {
+            console.log('called api here');
+            try {
+                const xy = fetch('https://mockapi.io/projects/671b70fd2c842d92c37fecb1')
+            } catch (error) {
+                console.error('error')
+            }
+        }
+    </script>
+</body>
+</html> 
