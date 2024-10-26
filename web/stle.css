@@ -1,0 +1,14 @@
+.button
+        {
+            width: 70px;
+            height: 40px;
+            color: red;
+            background-color: white;
+        }
+        .button:hover
+        {
+            background-color: green;
+        }
+.one {
+    color: blueviolet;
+}
